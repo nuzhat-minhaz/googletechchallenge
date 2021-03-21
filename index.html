@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device=width, initial scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap" rel="stylesheet">
+    <script src="javascript.js"></script>
+    <meta charset="utf-8">
+    <!-- NUZHAT MINHAZ AND ELIZABETH MOCK:: GOOGLE TECH CHALLENGE SUBMISSION DSC 2021 -->
+    <title> iPhone </title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F1F2F2;
+            font-weight: 400;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+
+        h4 {
+            font-size: 17px;
+            color: black;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 5px;
+            text-align: right;
+        }
+
+        h4 a{
+            text-decoration: underline blue;
+        }
+
+        h4 a:hover {
+            text-decoration: underline blue;
+        }
+
+        .topnav{ /* our topmost black navbar */
+            background-color: black;
+            padding-left: 300px;
+            color: white;
+            height: 60px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            font-family: Poppins;
+            font-weight: 400;
+            font-size: 20px;
+            overflow: hidden;
+        }
+
+
+        .topnav a {
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 18px 36px;
+            text-decoration: none;
+            font-size: 17px;
+            float:left;
+        }
+
+        .topnav a:hover {
+            background: rgb(5, 4, 44);
+            color: white;
+            text-decoration: blue underline;
+        }
+        
+        .topnav a:active{
+            text-decoration: underline blue;
+        }
+
+        /* our blue nav bar idk how ill make this*/
+        .midnav {
+            background-color:#2F4684;
+            height: 50px;
+            padding-top: 60px;
+            width: 100%;
+            font-family: Poppins;
+            font-weight: 400;
+            font-size: 17px;
+            overflow: hidden;
+
+        }
+
+        .midnav input[type=text] {
+            float: right;
+            padding: 3px;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            margin-top: 4px;
+            margin-right: 16px;
+            font-size: 17px;
+            background-color: transparent;
+            color: white;
+            font-family: poppins;
+
+        }
+
+        ::placeholder{
+            color: white;
+            font-weight: 300;
+        }
+
+        .midnav a {
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 17px;
+            float:left;
+            
+        }
+
+        .midnav a:hover {
+            text-decoration: underline;
+        }
+
+        .top-grid {
+            display: grid;
+            grid-template-columns: 59% 41%;
+            grid-template-areas: 'iphone welcome';
+            margin: 0px;
+            padding: 30px;
+            background-color: #F1F2F2;
+            color: black;
+            font-size: 40px;
+            height: 750px;
+        }
+
+        .iphone {
+            grid-area: iphone;
+            padding-left: 30px;
+            padding-right: 0;
+            padding-top: 50px;
+        }
+
+        #images {
+            border: none;
+            outline: none;
+            margin: 0;
+            width: 100%;
+            object-fit: contain;
+        }
+        #images2 {
+            border: none;
+            outline: none;
+            margin: 0;
+            width: 100%;
+            object-fit: contain;
+            
+            border-bottom: 5px solid rgb(80, 13, 167);
+        }
+
+        .welcome {
+            grid-area: welcome;
+            padding-right: 10px;
+            padding-left: 0;
+            padding-top: 180px;
+        }
+
+        .welcome h1 {
+            font-size: 50px;
+            font-weight:600;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .welcome h2 {
+            font-size: 23px;
+            font-weight: 500;
+            padding-bottom: 0;
+            padding-top: 0px;
+            margin-top: 0;
+        }
+
+        .button-grid { /* redirect to sections in page buttons */
+            display: grid;
+            grid-template-columns: 55% 45%;
+            grid-template-areas: 
+            'text-box text-box'
+            'button-left button-right'
+            'more-buttons-left more-buttons-right';
+            margin: 0px;
+            padding: 30px;
+            background-color: white;
+            color: black;
+            font-size: 30px;
+            padding-top: 50px;
+            padding-bottom: 80px;
+        }
+
+        .text-box{
+            grid-area: text-box;
+            font-size: 28px;
+            text-align: center;
+            line-height: 1.5;
+            font-weight: 400;
+            padding: 20px;
+        }
+
+        .button-left{
+            grid-area: button-left;
+            padding: 10px;
+            padding-right: 10px;
+            text-align: right;
+        }
+
+        .button-right {
+            grid-area: button-right;
+            padding: 10px;
+            padding-left: 10px;
+            text-align: left;
+        }
+
+        .more-buttons-left {
+            grid-area: more-buttons-left;
+            padding: 10px;
+            padding-right: 10px;
+            text-align: right;
+        }
+
+        .more-buttons-right {
+            grid-area: more-buttons-right;
+            padding: 10px;
+            padding-left: 10px;
+            text-align: left;
+        }
+
+            
+        button {
+            padding: 20px 80px;
+            font-size: 23px;
+            font-weight: 500;
+            border-radius: 5px;
+            color: inherit;
+            background-color: transparent;
+            font-family: poppins;
+            transition: 0.3s ease-in;
+        }
+
+        .border1 {
+            border: 3px solid #3B43FF;
+            color: #3B43FF;
+        }
+
+
+        .border2 {
+            border: 3px solid #E15905;
+            color: #E15905;
+        }
+
+        .border3 {
+            border: 3px solid #B40F4F;
+            color: #B40F4F;
+        }
+
+        .border4 {
+            border: 3px solid #1FAF5D;
+            color: #1FAF5D;
+        }
+
+
+        .button-grid button a, .border1 a, .border2 a, .border3 a, .border4 a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .button-grid button:hover{
+            text-decoration: none;
+            transition: 0.3s ease-in;
+        }
+
+        .border1:hover {
+            cursor: pointer;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.267);
+        }
+        .border2:hover {
+            cursor: pointer;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.267);
+        } 
+        .border3:hover {
+            cursor: pointer;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.267);
+        }
+        .border4:hover {
+            cursor: pointer;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.267);
+        }
+
+
+        .switch-grid { /* switch to iphone black background section */
+            background-color: black;
+            display: grid;
+            grid-template-columns: 55% 45%;
+            grid-template-areas: 
+            'switch switch-img';
+            height: 380px;
+            padding-top: 100px;
+        } 
+
+        .switch {
+            grid-area: switch;
+            color: white;
+            text-align: right;
+            padding: 50px;
+        }
+
+        .switch h1 {
+            font-size: 36px;
+            padding: 5px;
+            margin: 5px;
+            font-weight: 600;
+        }
+
+        .switch h2{
+            font-size: 24px;
+            padding: 5px;
+            padding-top: 0px;
+            margin: 5px;
+            font-weight: 400;
+        }
+        
+        .switch h3{
+            font-size: 25px;
+            padding: 10px;
+            padding-top: 50px;
+            margin: 5px;
+            font-weight: 300;
+            color: orange;
+        }
+
+        .switch-img {
+            grid-area: switch-img;
+        }
+
+        #yellow{
+            text-decoration: solid underline rgb(255, 166, 0);
+        }
+
+        .purchase-grid{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-areas: 
+            'pur-text pur-text'
+            'left1 right1'
+            'left2 right2'
+            'check check'
+            'return1 return1';
+            padding: 50px;
+            padding-top: 30px;
+            padding-bottom: 40px;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+
+        .check {
+            grid-area: check;
+            text-align: right;
+            padding-top: 20px;
+            padding-bottom: 0px;
+            padding-right: 30px;
+            color: #2F4684;
+            font-size: 24px;
+            padding-bottom: 30px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid grey;
+        }
+
+        .check a{
+            color: rgb(13, 13, 172);
+            text-decoration: none;
+
+        }
+        .check a:hover {
+            text-decoration: underline;
+        }
+
+        .pur-text {
+            grid-area: pur-text;
+            padding: 20px;
+            padding-left: 150px;
+        }
+
+        .pur-text h1{
+            font-size: 46px;
+            font-weight: 600;
+            color: #073CDB;
+        }
+
+        .pur-text h2{
+            font-size: 20px;
+            font-weight: 400;
+            color: #1a1a1a;
+        }
+
+        .left1-grid{
+            display: grid;
+            grid-template-columns: 45% 30% 25%;
+            grid-template-areas: 
+            'title0 img0 learn0'
+            'colors0 img0 learn0';
+            padding: 30px;
+            padding-left: 30px;
+            margin-bottom: 0;
+        }
+        
+        .right1-grid{
+            display: grid;
+            grid-template-columns: 45% 30% 25%;
+            grid-template-areas: 
+            'title1 img1 learn1'
+            'colors1 img1 learn1';
+            padding: 30px;
+            padding-left: 30px;
+            margin-bottom: 0;
+        }
+        
+        .left2-grid{
+            display: grid;
+            grid-template-columns: 45% 30% 25%;
+            grid-template-areas: 
+            'title2 img2 learn2'
+            'colors2 img2 learn2';
+            padding: 30px;
+            padding-left: 30px;
+            margin-bottom: 0;
+        }
+        
+        .right2-grid{
+            display: grid;
+            grid-template-columns: 45% 30% 25%;
+            grid-template-areas: 
+            'title3 img3 learn3'
+            'colors3 img3 learn3';
+            padding: 30px;
+            padding-left: 30px;
+            margin-bottom: 0;
+        }
+
+        .title0 {
+            grid-area: title0;
+            font-size: 16px;
+        }
+        .title1 {
+            grid-area: title1;
+            font-size: 16px;
+        }
+        .title2 {
+            grid-area: title2;
+            font-size: 16px;
+        }
+        .title3 {
+            grid-area: title3;
+            font-size: 16px;
+        }
+
+        .title0 h1, .title1 h1,.title2 h1,.title3 h1 {
+            font-size: 26px;
+            padding-bottom: 10px;
+            margin-bottom: 5px;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.61);
+        }
+
+        .title0 h2, .title1 h2,.title2 h2,.title3 h2 {
+            font-size: 16px;
+            padding-top: 0;
+            margin-top: 0;
+            font-weight: 300;
+            padding-bottom: 10px;
+        }
+
+
+        .img0 {
+            grid-area: img0;
+            padding-bottom: 0;
+            padding-left: 10px;
+        }
+        .img1 {
+            grid-area: img1;
+            padding-top: 10px;
+            padding-bottom: 0;
+            padding-left: 10px;
+        }
+        .img2 {
+            grid-area: img2;
+            padding-top: 10px;
+            padding-bottom: 0;
+            
+            padding-left: 10px;
+        }
+        .img3 {
+            grid-area: img3;
+            padding-top: 10px;
+            padding-left: 20px;
+        }
+
+        
+        .learn0 {
+            grid-area: learn0;
+            padding: 10px;
+            padding-left: 20px;
+        }
+        .learn1 {
+            grid-area: learn1;
+            padding: 10px;
+            padding-left: 20px;
+        }
+        .learn2 {
+            grid-area: learn2;
+            padding: 10px;
+            padding-left: 20px;
+        }
+        .learn3 {
+            grid-area: learn3;
+            padding: 10px;
+            padding-left: 20px;
+        }
+
+        #buy {
+            outline: none;
+            border: none;
+            background-color:#2F4684;
+            color: white;
+            border-radius: 30px;
+            padding: 10px 40px;
+            font-size: 18px;
+        }
+
+        #myBtn0 {
+            outline: none;
+            border: none;
+            background-color:transparent;
+            color: blue;
+            padding: 0;
+            padding-top: 28px;
+            font-size: 18px;
+        }
+
+        #myBtn0:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .learn0 h1, .learn1 h1, .learn2 h1, .learn3 h1 {
+            font-weight: 600;
+            padding-top: 40px;
+            font-size: 20px;
+        }
+
+        .learn0 h2, .learn1 h2, .learn2 h2, .learn3 h2 {
+            font-weight: 500;
+            padding-top: 20px;
+            font-size: 20px;
+            color: blue;
+        }
+
+        .colors0 {
+            grid-area: colors0;
+        }
+        .colors1 {
+            grid-area: colors1;
+        }
+        .colors2 {
+            grid-area: colors2;
+        }
+        .colors3 {
+            grid-area: colors3;
+        }
+
+        .left1 {
+            grid-area: left1;
+            margin: 10px;
+            margin-right: 5px;
+            background-color: white;
+            border: 1px solid rgb(212, 212, 212);
+            box-shadow: 5px 5px 19px rgba(0, 0, 0, 0.096);
+            border-radius: 5px;
+        }
+        .left2 {
+            grid-area: left2;
+            margin: 10px;
+            margin-right: 5px;
+            border: 1px solid rgb(212, 212, 212);
+            box-shadow: 5px 5px 19px rgba(0, 0, 0, 0.096);
+            background-color: white;
+            border-radius: 5px;
+        }
+        .right1 {
+            grid-area: right1;
+            margin: 10px;
+            margin-right: 5px;
+            border: 1px solid rgb(212, 212, 212);
+            box-shadow: 5px 5px 19px rgba(0, 0, 0, 0.096);
+            background-color: white;
+            border-radius: 5px;
+        }
+        .right2 {
+            grid-area: right2;
+            margin: 10px;
+            margin-right: 5px;
+            box-shadow: 5px 5px 19px rgba(0, 0, 0, 0.096);
+            background-color: white;
+            border: 1px solid rgb(212, 212, 212);
+            border-radius: 5px;
+        }
+
+        .carrier-grid{
+            display: grid;
+            grid-template-columns: 30% 70%;
+            grid-template-areas: 
+            'toptext toptext'
+            'midtext midtext'
+            'logos logos'
+            'return return';
+            background-color: white;
+        }
+
+        .return {
+            grid-area: return;
+            padding: 20px;
+            text-align: right;
+        }
+        .return1 {
+            grid-area: return1;
+            padding: 0;
+            text-align: right;
+        }
+
+        .toptext {
+            grid-area: toptext;
+            padding-top: 40px;
+            text-align: left;
+            padding-left: 250px;
+            padding-right: 250px;
+            padding-bottom: 20px;
+        }
+
+        .midtext {
+            grid-area: midtext;
+            text-align: right;
+            padding-right: 250px;
+            padding-left: 200px;
+            padding-top: 0;
+            background-image: url('hand.png');
+            background-size:cover;
+        }
+        .logos {
+            grid-area: logos;
+            text-align: right;
+            padding-left: 250px;
+            padding-right: 200px;
+        }
+
+        #offers{
+            outline: none;
+            border: none;
+            background-color:#bb045a;
+            color: white;
+            border-radius: 30px;
+            padding: 10px 40px;
+            font-size: 18px;
+        }
+
+        .toptext h1{
+            padding: 5px;
+            margin-bottom: 0;
+            line-height: 1.5;
+            font-size: 42px;
+            color: rgb(179, 17, 92);
+            font-weight: 600;
+        }
+
+        .midtext h1{
+            padding: 5px;
+            margin-bottom: 0;
+            line-height: 1.5;
+            font-size: 39px;
+            color: rgb(179, 17, 92);
+            font-weight: 600;
+        }
+        .toptext h2, .midtext h2 {
+            font-size: 20px;
+            padding: 5px; 
+            line-height: 1.5;
+            color: black;
+            font-weight: 500;
+        }
+
+        #pink {
+            color:rgb(202, 17, 103);
+            font-size: 27px;
+        }
+
+        .acc-grid{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-areas: 
+            'acctitle acctitle'
+            'mag pods'
+            'bottom-text bottom-text';
+            background-color: #F1F2F2;
+        }
+
+        .bottom-text {
+            grid-area: bottom-text;
+            padding: 20px;
+            text-align: right;
+        }
+
+        .acctitle {
+            grid-area: acctitle;
+            font-size: 35px;
+            font-weight: 600;
+            text-align: center;
+            color: rgb(206, 46, 25);
+            padding: 40px;
+        }
+        .mag {
+            grid-area: mag;
+            padding: 40px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            text-align: center;
+            background-color: white;
+            margin-left: 150px;
+            margin-right: 5px;
+            box-shadow: 4px 4px 20px rgba(128, 128, 128, 0.329);
+        }
+        .pods {
+            grid-area: pods;
+            text-align: center;
+            padding-top: 20px;
+            padding: 40px;
+            padding-bottom: 20px;
+            background-color: white;
+            margin-left: 5px;
+            margin-right: 150px;
+            box-shadow: 4px 4px 20px rgba(128, 128, 128, 0.329);
+        }
+
+        .pods h1, .mag h1 {
+            font-size: 35px;
+            padding: 5px;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .pods h2, .mag h2 {
+            padding: 0;
+            margin: 0;
+            font-size: 17px;
+            font-weight: 400;
+        }
+        .pods h3, .mag h3 {
+            color:rgb(206, 46, 25);
+            font-weight: 500;
+        }
+        .pods a{
+            text-decoration: none;
+        }
+
+        .pods a:hover{
+            text-decoration: underline;
+        }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 1400px;
+    max-height: 80%;
+  }
+  
+
+  /* Add Animation */
+  .modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.8s;
+    animation-name: zoom;
+    animation-duration: 0.8s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #smaller {
+      font-size: 20px;
+  }
+
+  #icons {
+    border: none;
+    outline: none;
+    margin: 0;
+    width: 20px;
+    object-fit: contain;
+    padding-right: 0;
+    float: left;
+    padding-left: 30px;
+    padding-top: 8px;
+  }
+
+  .feat-grid {
+    display: grid;
+    border-top: 1px solid rgb(167, 167, 167);
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-areas: 
+    'heading heading heading'
+    'tv music fitness'
+    'arcade gift news'
+    'basics basics basics'
+    'return2 return2 return2';
+    background-color: #F1F2F2;
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+
+  .heading{
+      grid-area: heading;
+      margin: 10px;
+      padding-top: 30px;
+      text-align: center;
+      padding-bottom: 30px;
+      font-size: 45px;
+      font-weight: 600;
+      color: rgb(106, 17, 179);
+  }
+  .tv{
+      grid-area: tv;
+      margin: 40px;
+      box-shadow: 8px 8px 20px rgba(128, 128, 128, 0.473);
+      
+  }
+  .music{
+      grid-area: music;
+      margin: 40px;
+      box-shadow: 8px 8px 20px rgba(128, 128, 128, 0.473);
+  }
+  .fitness{
+      grid-area: fitness;
+      margin: 40px;
+      box-shadow: 8px 8px 20px rgba(128, 128, 128, 0.473);
+  }
+  .arcade{
+      grid-area: arcade;
+      margin: 40px;
+      box-shadow: 8px 8px 20px rgba(128, 128, 128, 0.473);
+  }
+  .gift{
+      grid-area:gift;
+      margin: 40px;
+      box-shadow: 8px 8px 20px rgba(128, 128, 128, 0.473);
+  }
+  .news{
+      grid-area: news;
+      margin: 40px;
+      box-shadow: 8px 8px 20px rgba(128, 128, 128, 0.473);
+  }
+  .return2 {
+      grid-area: return2;
+      margin: 10px;
+      text-align: right;
+  }
+
+  .basics {
+      grid-area: basics;
+      margin: 40px;
+      box-shadow: 8px 8px 20px rgba(128, 128, 128, 0.473);
+      margin-right: 50px;
+      margin-left: 50px;
+      text-align: center;
+  }
+
+  
+    </style>
+    </head>
+<body>
+    <div class="topnav">
+            <a href="#">Mac</a>
+            <a href="#">iPad</a>
+            <a href="#">iPhone</a>
+            <a href="#">Watch</a>
+            <a href="#">TV</a>
+            <a href="#">Music</a>
+            <a href="#">Support</a>
+    </div>
+    <div class="midnav">
+        <img src="appi.png" id="icons"><a href="#">Home</a>
+        <input type="text" placeholder="Search this website..." name="search">
+        
+    </div>
+    <div class="top-grid">
+        <div class="iphone">
+            <img src="iphone.png" id="images">
+        </div>
+        <div class="welcome" id="#top">
+            <h1>Welcome to iPhone.</h1>
+            <h2>The world's most powerful personal device, <br>for everything and everyone.</h2>
+        </div>
+    </div>
+    <div class="button-grid">
+        <div class="text-box">
+            Click these buttons below to directly jump to the<br>respective sections on this page, or continue scrolling:
+        </div>
+        <div class="button-left">
+            <button class="border1"><a href="#purchase">Purchase and Compare the Latest iPhones</a></button>
+        </div>
+        <div class="button-right">
+            <button class="border2"><a href="#acc">Find Featured Accessories</a></button>
+        </div>
+        <div class="more-buttons-left">
+            <button class="border3"><a href="#carrier">Ways to Buy iPhone with Latest Carrier Deals</a></button>
+        </div>
+        <div class="more-buttons-right">
+            <button class="border4"><a href="#services">Apple Services and Other Products!</a></button>
+            
+            <h4><a href="#top">Return to Top of the Page</a></h4>
+        </div>
+    </div>
+    <div class="switch-grid">
+        <div class="switch">
+            <h1>Switch to iPhone</h1>
+            <h2>So many reasons. So incredibly easy.</h2>
+            <h3>learn more ></h3>
+        </div>
+        <div class="switch-img">
+            <img src="gold.png" id="images">
+        </div>
+    </div>
+    <div class="purchase-grid" id="purchase">
+        <div class="pur-text">
+            <h1>Purchase the Latest iPhone</h1>
+            <h2>Click "Buy" to choose color and carrier, and then you can proceed to purchasing your desired iPhone. <br>
+                Click on "learn more" to see in-page details about each iPhone such as display size and camera resolution.</h2>
+        </div>
+        <div class="left1">
+            <div class="left1-grid">
+                <div class="title0">
+                    <h1>iPhone 12 Pro Max</h1>
+                    <h2>available colors:</h2>
+                </div>
+                <div class="colors0">
+                    <img src="color0.png" id="images">
+                </div>
+                <div class="img0">
+                    <img src="iphone0.png" id="images">
+                </div>
+                <div class="learn0">
+                    <h1>from $999</h1>
+                    <button id="buy">Buy</button>
+                    <button id="myBtn0" onclick="imgOnClick()">Learn More </button>
+                </div>
+            
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span onclick="spanOnClick()" class="close"> <span id="smaller">Click to go back</span> &times;</span>
+                    <img class="modal-content" src="specs1.png" id="img01">
+                </div>
+            </div>
+        </div>
+        <div class="right1">
+            <div class="right1-grid">
+                <div class="title1">
+                    <h1>iPhone 12 Pro</h1>
+                    <h2>available colors:</h2>
+                </div>
+                <div class="colors1">
+                    <img src="color1.png" id="images">
+                </div>
+                <div class="img1">
+                    <img src="iphone1.png" id="images">
+                </div>
+                <div class="learn1">
+                    <h1>from $999</h1>
+                    <button id="buy">Buy</button>
+                    <button id="myBtn0" onclick="imgOnClick2()">Learn More </button>
+                </div>
+            
+                <!-- The Modal -->
+                <div id="myModal2" class="modal">
+                    <span onclick="spanOnClick2()" class="close"> <span id="smaller">Click to go back</span> &times;</span>
+                    <img class="modal-content" src="specs1.png" id="img02">
+                </div>
+
+            </div>
+        </div>
+        <div class="left2">
+            <div class="left2-grid">
+                <div class="title2">
+                    <h1>iPhone 12</h1>
+                    <h2>available colors:</h2>
+                </div>
+                <div class="colors2">
+                    <img src="color3.png" id="images">
+                </div>
+                <div class="img2">
+                    <img src="iphone2.png" id="images">
+                </div>
+                <div class="learn2">
+                    <h1>from $799</h1>
+                    <button id="buy">Buy</button>
+                    <button id="myBtn0" onclick="imgOnClick3()">Learn More </button>
+                </div>
+            
+                <!-- The Modal -->
+                <div id="myModal3" class="modal">
+                    <span onclick="spanOnClick3()" class="close"> <span id="smaller">Click to go back</span> &times;</span>
+                    <img class="modal-content" src="specs1.png" id="img03">
+                </div>
+            </div>
+        </div>
+        <div class="right2">
+            <div class="right2-grid">
+                <div class="title3">
+                    <h1>iPhone 12 Mini</h1>
+                    <h2>available colors:</h2>
+                </div>
+                <div class="colors3">
+                    <img src="color4.png" id="images">
+                </div>
+                <div class="img3">
+                    <img src="iphone3.png" id="images">
+                </div>
+                <div class="learn3">
+                    <h1>from $699</h1>
+                    <button id="buy">Buy</button>
+                    <button id="myBtn0" onclick="imgOnClick4()">Learn More </button>
+                </div>
+            
+                <!-- The Modal -->
+                <div id="myModal4" class="modal">
+                    <span onclick="spanOnClick4()" class="close"> <span id="smaller">Click to go back</span> &times;</span>
+                    <img class="modal-content" src="specs1.png" id="img04">
+                </div>
+            </div>
+        </div>
+        <div class="check">
+            <a href="#">Check out and compare older models ></a>
+            
+        </div>
+        <div class="return1">
+            <h4><a href="#top">Return to Top of the Page</a></h4>
+        </div>
+
+    </div>
+    <div class="carrier-grid" id="carrier">
+        <div class="toptext">
+            <h1>Ways to Buy iPhone <br>with the Latest Carrier Deals</h1>
+            <h2>You can also trade-in your current iPhone to purchase a new one at a lower price! Trade-in values may vary, and are based on the condition and model of your trade‑in device. 
+                <br>Our Specialists can help you shop — online or in store.
+                
+                <br><br><span id="pink">Chat with an iPhone Specialist ></span> </h2>
+        </div>
+        <div class="midtext">
+            <h1>Save up to $700 on the newest<br>
+                iPhone after trade‑in</h1>
+            <h2>You can choose a payment option that works for you, pay less with a<br> trade‑in, connect your new iPhone to your carrier, and get set up quickly.</h2>
+            <button id="offers"> Find Offers </button>
+            <p>&nbsp;</p>
+        </div>
+        <div class="logos">
+            <img src="save.png" id="images">
+        
+        </div>
+        <div class="return">
+            <h4><a href="#top">Return to Top of the Page</a></h4>
+        </div>
+    </div>
+    <div class="acc-grid" id="acc">
+        <div class="acctitle">
+            Accessories you can add to your iPhone purchase!
+        </div>
+        <div class="mag">
+            <img src="mag.png" id="images">
+                <h1>MagSafe</h1>
+                <h2> Snap on a magnetic case, wallet, or both. 
+                    <br> And get faster wireless charging.<br> <b>from $59</b></h2>
+                <h3>Shop and Learn More > </h3>
+        
+        </div>
+        <div class="pods">
+            <img src="pods.png" id="images">
+                <h1>AirPods</h1>
+                <h2> Wireless Bluetooth earbuds designed to work <br>with your iPhone and iPad.<br> <b>from $199</b></h2>
+                <h3>Shop and Learn More > </h3>
+      
+        </div>
+        <div class="bottom-text">
+            <h4><a href="#top">Return to Top of the Page</a></h4>
+        </div>
+    </div>
+    <div class="feat-grid">
+        <div class="heading">
+            Apple Features: Available on your iPhone.
+        </div>
+        <div class="tv">
+            <img src="tv.png" id="images2">
+        </div>
+        <div class="music">
+            <img src="music.png" id="images2">
+        </div>
+        <div class="fitness">
+            
+            <img src="fit.png" id="images2">
+        </div>
+        <div class="news">
+            
+            <img src="news.png" id="images2">
+        </div>
+        <div class="gift">
+            
+            <img src="gift.png" id="images2">
+        </div>
+        <div class="arcade">
+            <img src="arcade.png" id="images2">
+
+        </div>
+        <div class="basics">
+            <img src="specs3.png" id="images">
+        </div>
+        <div class="return2">
+            
+            <h4><a href="#top">Return to Top of the Page</a></h4>
+        </div>
+
+    </div>
+</body>
+</html>
+
